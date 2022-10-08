@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "sinon": "^14.0.1",
+    "test-console": "^2.0.0"
+  },
+  "name": "presently-practice",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-aaron/presently-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex-aaron/presently-practice/issues"
+  },
+  "homepage": "https://github.com/alex-aaron/presently-practice#readme"
+}
