@@ -4,27 +4,36 @@
     <meta charset="utf-8">
     <title>Presently</title>
 
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel='stylesheet' href="styles.css" />
 
   </head>
   <body>
-    <h1 id='title'>Presently</h1>
-    <br />
+    <div class='content'>
+      <h1 id='title'>Presently</h1>
+    </div>
 
     <div id="presentForm">
       <form id='presentForm'>
-        <div class="form-item-container" id="item-input-container">
-          <label>Item:</label>
-          <input type='text' id='itemInput' />
+
+        <div class='field' id="item-input-container">
+          <label class='label'>Item:</label>
+          <div class='control'>
+            <input type='text' id='itemInput' />
+          </div>
         </div>
-        <div class="form-item-container" id="cost-input-container">
-          <label>Cost:</label>
-          <input type='text' id='costInput' />
+
+        <div class='field' id="cost-input-container">
+          <label class='label'>Cost:</label>
+          <div class='control'>
+            <input type='text' id='costInput' />
+          </div>
         </div>
-        <div class="form-item-container" id="submit">
-          <button type="submit">Submit</button>
+
+        <div class='field is-grouped' id="submit">
+          <div>
+            <button type="button is-primary">Submit</button>
+          </div>
         </div>
       </form>
     </div>
