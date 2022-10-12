@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener('submit', function(e){
       e.preventDefault();
+      console.log('hit this condition');
+      addItemAndCost(e);
     });
 });
 
@@ -33,6 +35,10 @@ function renderCurrentCost(){
   costElement.innerHTML = `Current Cost: $${currentCost}`;
 }
 
+function addItemAndCost(input){
+  console.log(input.target);
+}
+
 let app = {};
 ///////////////////////////////////////////////////////////////////////////////
 //////////////////////////// DO NOT CODE ABOVE ////////////////////////////////
@@ -52,4 +58,4 @@ const presents = [
 // DO NOT CODE ABOVE //////////////////////////////////////////////////////////
 app.presents = presents;
 
-module.exports = app;
+// module.exports = app;
