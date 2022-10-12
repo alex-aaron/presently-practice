@@ -13,18 +13,18 @@
       <h1 id='title'>Presently</h1>
     </div>
 
-    <div id="presentForm">
+    <div id="presentForm" class='content'>
       <form id='presentForm'>
 
         <div class='field' id="item-input-container">
-          <label class='label'>Item:</label>
+          <label class='label'><h3>Item:</h3></label>
           <div class='control'>
             <input type='text' id='itemInput' />
           </div>
         </div>
 
         <div class='field' id="cost-input-container">
-          <label class='label'>Cost:</label>
+          <label class='label'><h3>Cost:</h3></label>
           <div class='control'>
             <input type='text' id='costInput' />
           </div>
@@ -32,20 +32,24 @@
 
         <div class='field is-grouped' id="submit">
           <div>
-            <button type="button is-primary">Submit</button>
+            <button class="button is-primary" type='submit'>Submit</button>
           </div>
         </div>
+
       </form>
     </div>
+    
+  <div class='content'>
+    <h2>Running list:</h2>
+      <div id='list-container'>
+        <ul id='item-list'>
 
-  <h2>Running list:</h2>
-    <div id='list-container'>
-      <ul id='item-list'>
+        </ul>
+      </div>
 
-      </ul>
-    </div>
+      <h4 id='currentCost'>Current Cost:</h4>
+  </div>
 
-    <h4 id='currentCost'>Current Cost:</h4>
     <script src="index.js"></script>
   </body>
 </html>
