@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Presently</title>
+
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">-->
+    <link rel='stylesheet' href="styles.css" />
+
+  </head>
+  <body>
+    <h1 id='title'>Presently</h1>
+    <br />
+
+    <div id="presentForm">
+      <form id='presentForm'>
+        <div class="form-item-container" id="item-input-container">
+          <label>Item:</label>
+          <input type='text' id='itemInput' />
+        </div>
+        <div class="form-item-container" id="cost-input-container">
+          <label>Cost:</label>
+          <input type='text' id='costInput' />
+        </div>
+        <div class="form-item-container" id="submit">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+  <h2>Running list:</h2>
+    <div id='list-container'>
+      <ul id='item-list'>
+
+      </ul>
+    </div>
+
+    <h4 id='currentCost'>Current Cost:</h4>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+body {
+  padding: 5px;
+}
+
+#title {
+  text-align: center;
+}
+
+.form-item-container {
+  padding: 5px;
+}
+
+.list-container {
+  padding: 5px;
+}
+
+#currentCostContainer {
+  border-style: solid;
+  border-color: black;
+  border-width: 2.5px;
+}
