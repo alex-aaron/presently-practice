@@ -42,8 +42,13 @@ function renderCurrentCost(){
   costElement.innerHTML = `Current Cost: $${currentCost}`;
 }
 
-function addToCost(){
-
+function addToCost(cost){
+  let costElement = document.getElementById('currentCost');
+  let costNum = parseFloat(cost);
+  let currentCost = costElement.innerHTML.split(": ")[1];
+  let currentCostNum = parseFloat(currentCost.slice(1));
+  let newCost = currentCostNum + costNum;
+  costElement.innerHTML = `Current Cost: $${newCost}`;
 }
 
 function addItemAndCostToArray(item, cost){
