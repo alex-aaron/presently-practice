@@ -9,20 +9,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener('submit', function(e){
       e.preventDefault();
-      console.log('hit this condition');
-      addItemAndCost(e);
+      addItemAndCost(newItem.value, newCost.value);
+      console.log(presents);
+      renderCurrentList();
     });
 });
 
 function renderCurrentList(){
   let currentList = document.getElementById('list-container');
-  console.log(currentList);
+  currentList.innerHTML = ``
   for (let i = 0; i < presents.length; i++){
     let listItem = document.createElement('li');
     listItem.innerHTML = `${presents[i].item} - ${presents[i].cost}`;
     currentList.append(listItem);
   }
 }
+
+// function renderCurrentList2(){
+//   let currentList = document.getElementById('item-list');
+//   currentList.innerHTML = "";
+//   for (let i = 0; i < presents.length; i++){
+//     let listItem = document.createElement('li');
+//     listItem.innerHTML =
+//   }
+// }
 
 function renderCurrentCost(){
   let costElement = document.getElementById('currentCost');
@@ -35,8 +45,9 @@ function renderCurrentCost(){
   costElement.innerHTML = `Current Cost: $${currentCost}`;
 }
 
-function addItemAndCost(input){
-  console.log(input.target);
+function addItemAndCost(item, cost){
+  let obj = { item: item, cost: cost };
+  presents.push(obj);
 }
 
 let app = {};
