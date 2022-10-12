@@ -9,15 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener('submit', function(e){
       e.preventDefault();
-      addItemAndCost(newItem.value, newCost.value);
-      console.log(presents);
-      renderCurrentList();
+      addItemAndCostToArray(newItem.value, newCost.value);
+      addToList(newItem.value, newCost.value);
+      addToCost(newCost.value);
     });
 });
 
 function renderCurrentList(){
-  let currentList = document.getElementById('list-container');
-  currentList.innerHTML = ``
+  let currentList = document.getElementById('item-list');
   for (let i = 0; i < presents.length; i++){
     let listItem = document.createElement('li');
     listItem.innerHTML = `${presents[i].item} - ${presents[i].cost}`;
@@ -25,14 +24,12 @@ function renderCurrentList(){
   }
 }
 
-// function renderCurrentList2(){
-//   let currentList = document.getElementById('item-list');
-//   currentList.innerHTML = "";
-//   for (let i = 0; i < presents.length; i++){
-//     let listItem = document.createElement('li');
-//     listItem.innerHTML =
-//   }
-// }
+function addToList(item, cost){
+  let currentList = document.getElementById('item-list');
+  let listItem = document.createElement('li');
+  listItem.innerHTML = `${item} - ${cost}`;
+  currentList.append(listItem);
+}
 
 function renderCurrentCost(){
   let costElement = document.getElementById('currentCost');
@@ -45,7 +42,11 @@ function renderCurrentCost(){
   costElement.innerHTML = `Current Cost: $${currentCost}`;
 }
 
-function addItemAndCost(item, cost){
+function addToCost(){
+
+}
+
+function addItemAndCostToArray(item, cost){
   let obj = { item: item, cost: cost };
   presents.push(obj);
 }
